@@ -14,10 +14,12 @@ public class Lab2 {
             System.out.println("============================================");
             //Perform attack
             team1.get(round).displayAttack(team1.get(round).attack()); team2.get(round).takeDamage(team1.get(round).getThisTimeAttack());
+            if (team2.get(round).gethitPoints()<=0) {
+                System.out.println("============================================"); continue;}
             team2.get(round).displayAttack(team2.get(round).attack()); team1.get(round).takeDamage(team2.get(round).getThisTimeAttack());
             System.out.println("============================================");
         }
-        if (team1.get(round).gethitPoints() < 0) {
+        if (team1.get(round).gethitPoints() <= 0) {
             team1.get(round).displayHealth();
             team2.get(round).displayHealth();
             System.out.println("============================================");
